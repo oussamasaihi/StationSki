@@ -2,7 +2,6 @@ package com.example.stationski.stationski2.Services;
 
 import com.example.stationski.stationski2.Repos.CoursRepo;
 import com.example.stationski.stationski2.entities.Cours;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -29,7 +28,13 @@ public class CoursService implements ICoursService {
     }
 
     @Override
-    public Cours retrieveCours(Long numCours) {
+    public Cours retrieveCours() {
         return null;
     }
+
+    @Override
+    public void deleteCours(Long id) {
+
+    }
 }
+

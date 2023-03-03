@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface IpisteService extends JpaRepository<Piste,Long> {
+public interface IpisteService {
     List<Piste> retrieveAllPistes();
     Piste addPiste(Piste piste);
     Piste updatePiste(Piste piste);

@@ -8,6 +8,7 @@ public interface ICoursService {
     List<Cours> retriveAllCourses () ;
     Cours addCours(Cours cours);
     Cours updateCours(Cours cours);
-    Cours retrieveCours(Long numCours);
+    Cours retrieveCours();
 
+    void deleteCours(Long id);
 }

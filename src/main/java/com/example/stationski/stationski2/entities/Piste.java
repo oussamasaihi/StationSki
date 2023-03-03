@@ -17,6 +17,6 @@ public class Piste {
     Couleur couleur ;
     int longeur ;
     int pente ;
-    @ManyToMany(mappedBy = "pistes")
+    @ManyToMany(mappedBy = "skieur")
     List<Skieur>skieurs;
 }
