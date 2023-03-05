@@ -1,9 +1,7 @@
 package com.example.stationski.stationski2.Services;
 
-import com.example.stationski.stationski2.Repos.AbonnementRepo;
 import com.example.stationski.stationski2.Repos.PisteRepo;
 import com.example.stationski.stationski2.Repos.SkieurRepo;
-import com.example.stationski.stationski2.entities.Abonnement;
 import com.example.stationski.stationski2.entities.Piste;
 import com.example.stationski.stationski2.entities.Skieur;
 import com.example.stationski.stationski2.entities.TypeAbonnement;
@@ -13,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+
 @Service
 
 public class SkieurService implements ISkieurService {

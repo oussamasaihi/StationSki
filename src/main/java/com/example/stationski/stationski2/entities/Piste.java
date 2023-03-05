@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -17,6 +18,6 @@ public class Piste {
     Couleur couleur ;
     int longeur ;
     int pente ;
-    @ManyToMany(mappedBy = "skieur")
-    List<Skieur>skieurs;
+    @ManyToMany(mappedBy = "pistes")
+    private Set<Skieur> skieurs;
 }
