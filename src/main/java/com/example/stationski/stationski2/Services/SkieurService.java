@@ -1,13 +1,16 @@
 package com.example.stationski.stationski2.Services;
 
+import com.example.stationski.stationski2.Repos.AbonnementRepo;
 import com.example.stationski.stationski2.Repos.PisteRepo;
 import com.example.stationski.stationski2.Repos.SkieurRepo;
+import com.example.stationski.stationski2.entities.Abonnement;
 import com.example.stationski.stationski2.entities.Piste;
 import com.example.stationski.stationski2.entities.Skieur;
 import com.example.stationski.stationski2.entities.TypeAbonnement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +22,8 @@ public class SkieurService implements ISkieurService {
     private SkieurRepo skieurRepo ;
     @Autowired
     private PisteRepo pisteRepo ;
+    @Autowired
+    private AbonnementRepo abonnementRepo ;
     @Override
     public List<Skieur> findAll() {
         return skieurRepo.findAll();
@@ -67,6 +72,15 @@ public class SkieurService implements ISkieurService {
 
         return skieur;
 
+    }
+
+
+
+    public Skieur assignSkieurToAbonnement (Long numSkieur , Long numAbon){
+
+        Skieur skieur = skieurRepo.findById(numSkieur).orElse(null);
+        Assert.notNull(skieur,"not found");
+        return null ;
     }
 
     @Override

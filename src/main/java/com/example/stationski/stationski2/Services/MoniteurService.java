@@ -1,15 +1,9 @@
 package com.example.stationski.stationski2.Services;
 
 import com.example.stationski.stationski2.entities.Moniteur;
-import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.query.FluentQuery;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Function;
 
 public class MoniteurService implements IMoniteurService {
 
@@ -39,12 +33,12 @@ public class MoniteurService implements IMoniteurService {
     }
 
     @Override
-    public Page<Moniteur> findAll(Pageable pageable) {
+    public Page<Moniteur> findAll() {
         return null;
     }
 
     @Override
-    public List<Moniteur> findAllById(Iterable<Long> longs) {
+    public List<Moniteur> findAllById() {
         return null;
     }
 

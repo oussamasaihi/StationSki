@@ -2,8 +2,6 @@ package com.example.stationski.stationski2.Services;
 
 import com.example.stationski.stationski2.entities.Moniteur;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
@@ -16,9 +14,9 @@ public interface IMoniteurService
 
     void delete(Long numMoniteur);
 
-    Page<Moniteur> findAll(Pageable pageable);
+    Page<Moniteur> findAll();
 
-    List<Moniteur> findAllById(Iterable<Long> longs);
+    List<Moniteur> findAllById();
 
     long count();
 
